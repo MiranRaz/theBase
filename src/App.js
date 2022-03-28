@@ -5,10 +5,11 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import NavBar from "./components/NavBar/NavBar";
 import Movies from "./components/Movies/Movies";
 import TvSeries from "./components/TvSeries/TvSeries";
+import Nothing from "./components/Nothing/Nothing";
 //import Search from "./components/Search/Search";
 
 import { CircularProgress } from "@mui/material";
-import Nothing from "./components/Nothing/Nothing";
+import Intro from "./components/Intro/Intro";
 
 const MOVIE_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1`;
 
@@ -20,22 +21,30 @@ export default function App() {
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    fetch(MOVIE_API)
+  const getMovie = (API) => {
+    fetch(API)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
         setLoading(false);
       });
-  }, []);
+  };
 
-  useEffect(() => {
-    fetch(TVSERIES_API)
+  const getSeries = (API) => {
+    fetch(API)
       .then((res) => res.json())
       .then((data) => {
         setSeries(data.results);
         setLoading(false);
       });
+  };
+
+  useEffect(() => {
+    getMovie(MOVIE_API);
+  }, []);
+
+  useEffect(() => {
+    getSeries(TVSERIES_API);
   }, []);
 
   const movieChangeHandler = (e) => {
@@ -50,6 +59,8 @@ export default function App() {
         .then((data) => {
           setMovies(data.results);
         });
+    } else if (length === 0) {
+      getMovie(MOVIE_API);
     }
   };
 
@@ -65,14 +76,15 @@ export default function App() {
         .then((data) => {
           setSeries(data.results);
         });
+    } else if (length === 0) {
+      getSeries(TVSERIES_API);
     }
   };
 
   return (
     <Router>
       <NavBar />
-
-      <h1 className="heading">Top 30</h1>
+      <Intro />
 
       <Routes>
         <Route
@@ -80,7 +92,9 @@ export default function App() {
           path="/"
           element={
             <>
-              <h3 className="under-heading">Find your favourite movie</h3>
+              <h3 className="under-heading" id="search">
+                Find your favourite Movie
+              </h3>
               <div className="container">
                 <div className="add-content">
                   <div className="input-wrapper">
@@ -112,7 +126,9 @@ export default function App() {
           path="/tvseries"
           element={
             <>
-              <h3 className="under-heading">Find your favourite Tv Show!</h3>
+              <h3 className="under-heading" id="search">
+                Find your favourite Tv Show!
+              </h3>
               <div className="container">
                 <div className="add-content">
                   <div className="input-wrapper">

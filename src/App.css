@@ -9,12 +9,46 @@ body {
   margin: 0;
 }
 
-/* H1 & H3 */
-.heading {
+/* intro */
+.frame {
+  background-image: url("./img/MAIN.jpg");
+  display: flex;
+  animation: displace 16s linear infinite;
+}
+@keyframes displace {
+  from {
+    background-position: 0 left;
+  }
+  to {
+    background-position: 160px center;
+  }
+}
+.intro {
   display: flex;
   align-items: center;
   justify-content: center;
+  background-color: rgb(198, 183, 146);
+  opacity: 0.8;
+  margin-top: 80px;
+  height: 777px;
+  width: 100vw;
+}
+
+/* H1 & H3 */
+.heading {
   font-size: 150px;
+}
+
+.arrow {
+  transition-duration: 2s;
+  animation: arrowBlink 2s infinite;
+  text-decoration: none;
+  color: black;
+}
+@keyframes arrowBlink {
+  100% {
+    opacity: 0;
+  }
 }
 
 .under-heading {
@@ -26,8 +60,7 @@ body {
 
 @media (max-width: 768px) {
   .heading {
-    margin-top: 7rem;
-    font-size: 50px
+    font-size: 50px;
   }
   .under-heading {
     font-size: 15px;
@@ -39,6 +72,7 @@ body {
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
+  z-index: 4000;
 }
 
 @media (min-width: 768px) {
@@ -65,20 +99,24 @@ header {
   position: fixed;
   top: 0;
   width: 100vw;
+  height: 80px;
+  z-index: 5000;
 }
 
 header .inner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 10px 0;
+  padding: 18px 0;
 }
 
 header a {
   color: var(--white);
-  font-size: 1.25rem;
+  font-size: 2rem;
   text-decoration: none;
   transition: all 0.3s ease;
+  align-items: center;
+  justify-content: center;
 }
 
 header a:hover {
@@ -87,7 +125,7 @@ header a:hover {
 
 header .brand a {
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: 2rem;
 }
 
 header .nav-links {
