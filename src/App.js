@@ -40,30 +40,38 @@ export default function App() {
   const movieChangeHandler = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
-    fetch(
-      `https://api.themoviedb.org/3/search/movie?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setMovies(data.results);
-      });
+    var length = e.target.value.length;
+    if (length >= 3) {
+      fetch(
+        `https://api.themoviedb.org/3/search/movie?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setMovies(data.results);
+        });
+    }
   };
 
   const seriesChangeHandler = (e) => {
     e.preventDefault();
     setQuery(e.target.value);
-    fetch(
-      `https://api.themoviedb.org/3/search/tv?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}`
-    )
-      .then((res) => res.json())
-      .then((data) => {
-        setSeries(data.results);
-      });
+    var length = e.target.value.length;
+    if (length >= 3) {
+      fetch(
+        `https://api.themoviedb.org/3/search/tv?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}`
+      )
+        .then((res) => res.json())
+        .then((data) => {
+          setSeries(data.results);
+        });
+    }
   };
 
   return (
     <Router>
       <NavBar />
+
+      <h1 className="heading">Top 30</h1>
 
       <Routes>
         <Route
@@ -71,19 +79,16 @@ export default function App() {
           path="/"
           element={
             <>
-              <h1 className="heading">Top 30 Movies</h1>
               <h3 className="under-heading">Find your favourite movie</h3>
-              <div className="add-page">
-                <div className="container">
-                  <div className="add-content">
-                    <div className="input-wrapper">
-                      <input
-                        type="text"
-                        placeholder="Search..."
-                        value={query}
-                        onChange={movieChangeHandler}
-                      />
-                    </div>
+              <div className="container">
+                <div className="add-content">
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      placeholder="Enter at least 3 letters..."
+                      value={query}
+                      onChange={movieChangeHandler}
+                    />
                   </div>
                 </div>
               </div>
@@ -108,19 +113,16 @@ export default function App() {
           path="/tvseries"
           element={
             <>
-              <h1 className="heading">Top 30 Tv Series</h1>
               <h3 className="under-heading">Find your favourite Tv Show!</h3>
-              <div className="add-page">
-                <div className="container">
-                  <div className="add-content">
-                    <div className="input-wrapper">
-                      <input
-                        type="text"
-                        placeholder="Search..."
-                        value={query}
-                        onChange={seriesChangeHandler}
-                      />
-                    </div>
+              <div className="container">
+                <div className="add-content">
+                  <div className="input-wrapper">
+                    <input
+                      type="text"
+                      placeholder="Enter at least 3 letters..."
+                      value={query}
+                      onChange={seriesChangeHandler}
+                    />
                   </div>
                 </div>
               </div>

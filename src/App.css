@@ -24,6 +24,16 @@ body {
   font-size: 50px;
 }
 
+@media (max-width: 768px) {
+  .heading {
+    margin-top: 7rem;
+    font-size: 50px
+  }
+  .under-heading {
+    font-size: 15px;
+  }
+}
+
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -33,7 +43,7 @@ body {
 
 @media (min-width: 768px) {
   .container {
-    width: 750px;
+    width: 100%;
   }
 }
 
@@ -54,7 +64,7 @@ header {
   background-color: var(--primary);
   position: fixed;
   top: 0;
-  width: 100%;
+  width: 100vw;
 }
 
 header .inner-content {
@@ -120,6 +130,7 @@ header .nav-links li:last-child {
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+  width: 100vw;
 }
 
 .card {
