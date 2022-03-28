@@ -59,7 +59,7 @@ export default function App() {
       .then((data) => {
         setSeries(data.results);
       });
-  };  
+  };
 
   return (
     <Router>
@@ -91,9 +91,13 @@ export default function App() {
                 <CircularProgress />
               ) : (
                 <div className="card-container">
-                  {movies.map((movie) => (
-                    <Movies key={movie.id} {...movie} />
-                  ))}
+                  {movies.length > 0 ? (
+                    movies.map((movie) => <Movies key={movie.id} {...movie} />)
+                  ) : (
+                    <h3 className="under-heading">
+                      We couldn't find the movie that you are looking for!
+                    </h3>
+                  )}
                 </div>
               )}
             </>
@@ -124,9 +128,15 @@ export default function App() {
                 <CircularProgress />
               ) : (
                 <div className="card-container">
-                  {series.map((serie) => (
-                    <TvSeries key={serie.id} {...serie} />
-                  ))}
+                  {series.length > 0 ? (
+                    series.map((serie) => (
+                      <TvSeries key={serie.id} {...serie} />
+                    ))
+                  ) : (
+                    <h3 className="under-heading">
+                      We couldn't find the tv show that you are looking for!
+                    </h3>
+                  )}
                 </div>
               )}
             </>

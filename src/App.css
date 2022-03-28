@@ -15,7 +15,6 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 150px;
-  margin: 3rem;
 }
 
 .under-heading {
@@ -53,6 +52,9 @@ body {
 /* Header Styles */
 header {
   background-color: var(--primary);
+  position: fixed;
+  top: 0;
+  width: 100%;
 }
 
 header .inner-content {
