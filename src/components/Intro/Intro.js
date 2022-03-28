@@ -7,13 +7,13 @@ export default function Intro() {
       <div className="intro">
         <h1 className="heading">Top 30</h1>
         <a href="#search" className="arrow">
-          <KeyboardArrowDownIcon
-            sx={{
-              alignItems: "center",
-              justifyContent: "center",
-              fontSize: 140,
-            }}
-          />
+          <div className="cont">
+            <KeyboardArrowDownIcon
+              sx={{
+                fontSize: 140,
+              }}
+            />
+          </div>
         </a>
       </div>
     </div>

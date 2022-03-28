@@ -9,6 +9,11 @@ body {
   margin: 0;
 }
 
+/* H1 & H3 */
+.heading {
+  font-size: 150px;
+}
+
 /* intro */
 .frame {
   background-image: url("./img/MAIN.jpg");
@@ -23,6 +28,7 @@ body {
     background-position: 160px center;
   }
 }
+
 .intro {
   display: flex;
   align-items: center;
@@ -34,9 +40,10 @@ body {
   width: 100vw;
 }
 
-/* H1 & H3 */
-.heading {
-  font-size: 150px;
+.cont {
+  position: absolute;
+  top: calc(777px - 100px);
+  left: 47%;
 }
 
 .arrow {
@@ -44,6 +51,7 @@ body {
   animation: arrowBlink 2s infinite;
   text-decoration: none;
   color: black;
+  font-size: 5rem;
 }
 @keyframes arrowBlink {
   100% {
@@ -63,7 +71,8 @@ body {
     font-size: 50px;
   }
   .under-heading {
-    font-size: 15px;
+    font-size: 22px;
+    margin-top: 70px;
   }
 }
 
@@ -101,6 +110,11 @@ header {
   width: 100vw;
   height: 80px;
   z-index: 5000;
+}
+@media (max-width: 768) {
+  .nav-links {
+    /* hambureger meni */
+  }
 }
 
 header .inner-content {
@@ -147,7 +161,7 @@ header .nav-links li:last-child {
 
 /* Add Page */
 .add-content {
-  padding: 50px 0;
+  padding: 30px 0;
   max-width: 600px;
   margin: 0 auto;
 }
@@ -155,13 +169,21 @@ header .nav-links li:last-child {
 .add-content .input-wrapper input {
   width: 100%;
   background-color: var(--primary);
-  padding: 10px;
+  padding-top: 11px;
+  padding-bottom: 11px;
   border-radius: 5px;
   border: none;
   color: var(--white);
   font-size: 1.25rem;
 }
-
+@media (max-width: 776px) {
+  .add-content {
+    padding: 60px 0;
+  }
+  .add-content .input-wrapper input {
+    padding-top: 16px;
+  }
+}
 /* Movie & TV-Series Page */
 .card-container {
   display: flex;
