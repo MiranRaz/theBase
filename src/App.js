@@ -8,6 +8,7 @@ import TvSeries from "./components/TvSeries/TvSeries";
 //import Search from "./components/Search/Search";
 
 import { CircularProgress } from "@mui/material";
+import Nothing from "./components/Nothing/Nothing";
 
 const MOVIE_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1`;
 
@@ -99,9 +100,7 @@ export default function App() {
                   {movies.length > 0 ? (
                     movies.map((movie) => <Movies key={movie.id} {...movie} />)
                   ) : (
-                    <h3 className="under-heading">
-                      We couldn't find the movie that you are looking for!
-                    </h3>
+                    <Nothing />
                   )}
                 </div>
               )}
@@ -135,9 +134,7 @@ export default function App() {
                       <TvSeries key={serie.id} {...serie} />
                     ))
                   ) : (
-                    <h3 className="under-heading">
-                      We couldn't find the tv show that you are looking for!
-                    </h3>
+                    <Nothing />
                   )}
                 </div>
               )}
