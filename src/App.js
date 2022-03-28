@@ -7,22 +7,24 @@ import Movies from "./components/Movies/Movies";
 import TvSeries from "./components/TvSeries/TvSeries";
 //import Search from "./components/Search/Search";
 
-const MOVIE_API =
-  "https://api.themoviedb.org/3/movie/top_rated?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1";
+import { CircularProgress } from "@mui/material";
 
-const TVSERIES_API =
-  "https://api.themoviedb.org/3/tv/top_rated?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1";
+const MOVIE_API = `https://api.themoviedb.org/3/movie/top_rated?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1`;
+
+const TVSERIES_API = `https://api.themoviedb.org/3/tv/top_rated?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1`;
 
 export default function App() {
   const [movies, setMovies] = useState([]);
   const [series, setSeries] = useState([]);
   const [query, setQuery] = useState("");
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     fetch(MOVIE_API)
       .then((res) => res.json())
       .then((data) => {
         setMovies(data.results);
+        setLoading(false);
       });
   }, []);
 
@@ -31,14 +33,13 @@ export default function App() {
       .then((res) => res.json())
       .then((data) => {
         setSeries(data.results);
+        setLoading(false);
       });
   }, []);
 
   const movieChangeHandler = (e) => {
     e.preventDefault();
-
     setQuery(e.target.value);
-
     fetch(
       `https://api.themoviedb.org/3/search/movie?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}`
     )
@@ -58,7 +59,7 @@ export default function App() {
       .then((data) => {
         setSeries(data.results);
       });
-  };
+  };  
 
   return (
     <Router>
@@ -70,13 +71,15 @@ export default function App() {
           path="/"
           element={
             <>
+              <h1 className="heading">Top 30 Movies</h1>
+              <h3 className="under-heading">Find your favourite movie</h3>
               <div className="add-page">
                 <div className="container">
                   <div className="add-content">
                     <div className="input-wrapper">
                       <input
                         type="text"
-                        placeholder="Search movie"
+                        placeholder="Search..."
                         value={query}
                         onChange={movieChangeHandler}
                       />
@@ -84,25 +87,32 @@ export default function App() {
                   </div>
                 </div>
               </div>
-              <div className="card-container">
-                {movies.map((movie) => (
-                  <Movies key={movie.id} {...movie} />
-                ))}
-              </div>
+              {loading ? (
+                <CircularProgress />
+              ) : (
+                <div className="card-container">
+                  {movies.map((movie) => (
+                    <Movies key={movie.id} {...movie} />
+                  ))}
+                </div>
+              )}
             </>
           }
         />
+
         <Route
           path="/tvseries"
           element={
             <>
+              <h1 className="heading">Top 30 Tv Series</h1>
+              <h3 className="under-heading">Find your favourite Tv Show!</h3>
               <div className="add-page">
                 <div className="container">
                   <div className="add-content">
                     <div className="input-wrapper">
                       <input
                         type="text"
-                        placeholder="Search movie"
+                        placeholder="Search..."
                         value={query}
                         onChange={seriesChangeHandler}
                       />
@@ -110,11 +120,15 @@ export default function App() {
                   </div>
                 </div>
               </div>
-              <div className="card-container">
-                {series.map((serie) => (
-                  <TvSeries key={serie.id} {...serie} />
-                ))}
-              </div>
+              {loading ? (
+                <CircularProgress />
+              ) : (
+                <div className="card-container">
+                  {series.map((serie) => (
+                    <TvSeries key={serie.id} {...serie} />
+                  ))}
+                </div>
+              )}
             </>
           }
         />
