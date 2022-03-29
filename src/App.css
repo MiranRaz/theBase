@@ -251,7 +251,7 @@ header .nav-links li:last-child {
   align-items: center;
   justify-content: center;
   width: 100%;
-  margin: 100px;
+  margin: 100px 0px;
 }
 
 /* RESPONSIVE MEDIA*/
