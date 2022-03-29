@@ -57,7 +57,6 @@ export default function App() {
 
   const movieChangeHandler = (e) => {
     setQuery(e);
-    console.log(e);
     var length = e.length;
     if (length >= 3) {
       fetch(
