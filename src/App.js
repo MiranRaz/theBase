@@ -105,7 +105,7 @@ export default function App() {
               element={
                 <>
                   <h3 className="under-heading" id="search">
-                    Find your favourite Movie
+                    Find your favourite Movie!
                   </h3>
                   <div className="container">
                     <div className="searcher">
