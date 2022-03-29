@@ -245,6 +245,14 @@ header .nav-links li:last-child {
   background-color: red;
 }
 
+/* Pagination */
+.page-cont {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  bottom: 10px;
+}
+
 /* RESPONSIVE MEDIA*/
 
 /*MAX WIDTH*/
@@ -253,6 +261,7 @@ header .nav-links li:last-child {
   .heading {
     font-size: 63px;
     margin-top: 200px;
+    z-index: 6000;
   }
   .under-heading {
     font-size: 18px;
