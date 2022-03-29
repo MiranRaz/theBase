@@ -85,7 +85,9 @@ export default function NavBar() {
         <DrawerHeader>
           <IconButton onClick={handleDrawerClose}>
             <ChevronRightIcon
-              style={{ alignItems: "center", justifyContent: "center" }}
+              sx={{
+                fontSize: "50px",
+              }}
             />
           </IconButton>
         </DrawerHeader>
@@ -98,21 +100,25 @@ export default function NavBar() {
             margin: "10px",
           }}
         >
-          <Link
-            to="/"
-            style={{ color: "black", margin: "20px" }}
-            onClick={handleDrawerClose}
-          >
-            Movies
-          </Link>
+          <div className="under-heading">
+            <Link
+              to="/"
+              style={{ color: "black", margin: "20px", fontSize: "30px" }}
+              onClick={handleDrawerClose}
+            >
+              Movies
+            </Link>
+          </div>
           <Divider />
-          <Link
-            to="/tvseries"
-            style={{ color: "black", margin: "20px" }}
-            onClick={handleDrawerClose}
-          >
-            Tv Series
-          </Link>
+          <div className="under-heading">
+            <Link
+              to="/tvseries"
+              style={{ color: "black", margin: "20px", fontSize: "30px" }}
+              onClick={handleDrawerClose}
+            >
+              Tv Series
+            </Link>
+          </div>
         </div>
       </Drawer>
     </AppBar>
