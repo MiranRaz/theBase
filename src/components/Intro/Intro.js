@@ -6,7 +6,7 @@ export default function Intro() {
     <div className="frame">
       <div className="intro">
         <div className="heading-cont">
-          <h1 className="heading">Top 30</h1>
+          <h1 className="heading">Top 30!</h1>
         </div>
         <a href="#search" className="arrow">
           <div className="cont">

@@ -63,18 +63,11 @@ body {
 
 .arrow {
   position: relative;
-  transition-duration: 2s;
-  animation: arrowBlink 2s infinite;
+  transition-duration: 1s;
   text-decoration: none;
   color: black;
   font-size: 5rem;
   top: calc(70vh - 777px);
-}
-
-@keyframes arrowBlink {
-  100% {
-    opacity: 0;
-  }
 }
 
 .under-heading {

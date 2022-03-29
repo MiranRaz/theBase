@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
-import { styled, useTheme } from "@mui/material/styles";
+import { styled } from "@mui/material/styles";
 
 import { AppBar, Container, Divider, IconButton, Toolbar } from "@mui/material";
 import Hidden from "@mui/material/Hidden";
@@ -11,17 +11,15 @@ import Drawer from "@mui/material/Drawer";
 
 const drawerWidth = 270;
 
-const DrawerHeader = styled("div")(({ theme }) => ({
+const DrawerHeader = styled("div")(() => ({
   display: "flex",
   alignItems: "center",
-  padding: theme.spacing(0, 1),
+  padding: 1,
   // necessary for content to be below app bar
-  ...theme.mixins.toolbar,
   justifyContent: "flex-start",
 }));
 
 export default function NavBar() {
-  const theme = useTheme();
   const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
@@ -92,14 +90,7 @@ export default function NavBar() {
           </IconButton>
         </DrawerHeader>
         <Divider />
-        <div
-          style={{
-            display: "block",
-            alignItems: "center",
-            justifyContent: "space-between",
-            margin: "10px",
-          }}
-        >
+        <>
           <div className="under-heading">
             <Link
               to="/"
@@ -119,7 +110,7 @@ export default function NavBar() {
               Tv Series
             </Link>
           </div>
-        </div>
+        </>
       </Drawer>
     </AppBar>
   );
