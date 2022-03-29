@@ -1,24 +1,120 @@
-import React from "react";
+import React, { useState } from "react";
 import { Link } from "react-router-dom";
 
+import { styled, useTheme } from "@mui/material/styles";
+
+import { AppBar, Container, Divider, IconButton, Toolbar } from "@mui/material";
+import Hidden from "@mui/material/Hidden";
+import MenuIcon from "@mui/icons-material/Menu";
+import ChevronRightIcon from "@mui/icons-material/ChevronRight";
+import Drawer from "@mui/material/Drawer";
+
+const drawerWidth = 270;
+
+const DrawerHeader = styled("div")(({ theme }) => ({
+  display: "flex",
+  alignItems: "center",
+  padding: theme.spacing(0, 1),
+  // necessary for content to be below app bar
+  ...theme.mixins.toolbar,
+  justifyContent: "flex-start",
+}));
+
 export default function NavBar() {
+  const theme = useTheme();
+  const [open, setOpen] = useState(false);
+
+  const handleDrawerOpen = () => {
+    setOpen(true);
+  };
+
+  const handleDrawerClose = () => {
+    setOpen(false);
+  };
   return (
-    <header>
-      <div className="container">
-        <div className="inner-content">
-          <div className="brand">
-            <Link to="/">theBase</Link>
+    <AppBar style={{ backgroundColor: "#032541" }}>
+      <Toolbar disableGutters>
+        <Container max-width="md">
+          <div className="inner-content">
+            <div className="brand">
+              <Link to="/" onClick={handleDrawerClose}>
+                theBase
+              </Link>
+            </div>
+            <Hidden lgDown>
+              <ul className="nav-links">
+                <li>
+                  <Link to="/" onClick={handleDrawerClose}>
+                    Movies
+                  </Link>
+                </li>
+                <li>
+                  <Link to="/tvseries" onClick={handleDrawerClose}>
+                    Tv Series
+                  </Link>
+                </li>
+              </ul>
+            </Hidden>
+            <Hidden lgUp>
+              <IconButton
+                color="inherit"
+                aria-label="open drawer"
+                onClick={handleDrawerOpen}
+                edge="start"
+                sx={{ mr: 2, ...(open && { display: "none" }) }}
+              >
+                <MenuIcon style={{ fontSize: "40px" }} />
+              </IconButton>
+            </Hidden>
           </div>
-          <ul className="nav-links">
-            <li>
-              <Link to="/">Movies</Link>
-            </li>
-            <li>
-              <Link to="/tvseries">Tv Series</Link>
-            </li>
-          </ul>
+        </Container>
+      </Toolbar>
+      <Drawer
+        sx={{
+          width: drawerWidth,
+          flexShrink: 0,
+          "& .MuiDrawer-paper": {
+            width: drawerWidth,
+            boxSizing: "border-box",
+          },
+        }}
+        variant="persistent"
+        anchor="right"
+        open={open}
+      >
+        <DrawerHeader>
+          <IconButton onClick={handleDrawerClose}>
+            <ChevronRightIcon
+              style={{ alignItems: "center", justifyContent: "center" }}
+            />
+          </IconButton>
+        </DrawerHeader>
+        <Divider />
+        <div
+          style={{
+            display: "block",
+            alignItems: "center",
+            justifyContent: "space-between",
+            margin: "10px",
+          }}
+        >
+          <Link
+            to="/"
+            style={{ color: "black", margin: "20px" }}
+            onClick={handleDrawerClose}
+          >
+            Movies
+          </Link>
+          <Divider />
+          <Link
+            to="/tvseries"
+            style={{ color: "black", margin: "20px" }}
+            onClick={handleDrawerClose}
+          >
+            Tv Series
+          </Link>
         </div>
-      </div>
-    </header>
+      </Drawer>
+    </AppBar>
   );
 }

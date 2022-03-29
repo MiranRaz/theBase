@@ -24,7 +24,7 @@ body {
 .heading {
   position: relative;
   font-size: 150px;
-  margin-top: 100px;
+  margin-top: 300px;
 }
 
 /* intro */
@@ -69,7 +69,7 @@ body {
   text-decoration: none;
   color: black;
   font-size: 5rem;
-  top: calc(70vh - 577px);
+  top: calc(70vh - 777px);
 }
 
 @keyframes arrowBlink {
@@ -95,7 +95,6 @@ body {
 
 /* Header Styles */
 header {
-  background-color: var(--primary);
   position: fixed;
   top: 0;
   width: 100vw;
@@ -126,6 +125,8 @@ header a:hover {
 header .brand a {
   font-weight: 700;
   font-size: 2rem;
+  padding: 3px;
+  color: whitesmoke;
 }
 
 header .nav-links {
@@ -256,6 +257,7 @@ header .nav-links li:last-child {
 @media (max-width: 768px) {
   .heading {
     font-size: 63px;
+    margin-top: 200px;
   }
   .under-heading {
     font-size: 18px;
@@ -263,13 +265,10 @@ header .nav-links li:last-child {
   }
   .arrow {
     font-size: 4rem;
-    top: calc(70vh - 500px);
+    top: calc(70vh - 455px);
   }
   .card {
     margin: 1rem;
-  }
-  .nav-links {
-    /* hambureger meni */
   }
   .searcher {
     padding: 60px 0;
