@@ -109,6 +109,7 @@ export default function App() {
           <NavBar />
 
           <Routes>
+            {/* MOVIES */}
             <Route
               exact
               path="/"
@@ -125,7 +126,7 @@ export default function App() {
                     <div className="card-container">
                       {movies.length > 0 ? (
                         movies.map((movie) => (
-                          <Movies key={movie.id} {...movie} />
+                          <Movies key={movie.id} props={movie} />
                         ))
                       ) : (
                         <Nothing />
@@ -137,8 +138,10 @@ export default function App() {
               }
             />
 
+            {/* DETAILS */}
             <Route path="/details" element={<MovieDetails />} />
 
+            {/*TV SHOWS */}
             <Route
               path="/tvseries"
               element={
@@ -154,7 +157,7 @@ export default function App() {
                     <div className="card-container">
                       {series.length > 0 ? (
                         series.map((serie) => (
-                          <TvSeries key={serie.id} {...serie} />
+                          <TvSeries key={serie.id} props={serie} />
                         ))
                       ) : (
                         <Nothing />

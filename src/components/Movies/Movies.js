@@ -1,5 +1,5 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const IMGS = "https://image.tmdb.org/t/p/w500";
 
 const setColor = (vote) => {
@@ -12,18 +12,18 @@ const setColor = (vote) => {
   }
 };
 
-export default function Movies({ id, title, poster_path, vote_average }) {
+export default function Movies({ props }) {
   return (
-    <>
-      <div className="card">
-        <img src={IMGS + poster_path} alt={title} />
+    <div className="card">
+      <Link to="/details" className="card-lnk-to" {...props}>
+        <img src={IMGS + props.poster_path} alt={props.title} />
         <div className="card-info">
-          <h3>{title}</h3>
-          <span className={`tag ${setColor(vote_average)}`}>
-            {vote_average}
+          <h3>{props.title}</h3>
+          <span className={`tag ${setColor(props.vote_average)}`}>
+            {props.vote_average}
           </span>
         </div>
-      </div>
-    </>
+      </Link>
+    </div>
   );
 }

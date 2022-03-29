@@ -105,7 +105,6 @@ header .inner-content {
 
 header a {
   color: var(--white);
-  font-size: 2rem;
   text-decoration: none;
   transition: all 0.3s ease;
   align-items: center;
@@ -132,6 +131,9 @@ header .nav-links {
 }
 
 header .nav-links li {
+  
+  font-weight: 700;
+  font-size: 1.6rem;
   display: inline-block;
   margin-right: 30px;
 }
@@ -193,6 +195,10 @@ header .nav-links li:last-child {
 }
 
 /* Movie & TV-Series Page */
+.card-lnk-to {
+  text-decoration: none;
+  color: black;
+}
 .card-container {
   display: flex;
   flex-wrap: wrap;
@@ -265,7 +271,10 @@ img:hover {
   margin: 150px 100px 0px 100px;
   color: black;
 }
-
+.details-back {
+  margin: 1rem;
+  width: 20px;
+}
 .details-headings {
   background-image: url("./img/CINEMA.png");
   background-size: cover;
@@ -277,6 +286,7 @@ img:hover {
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
 }
+
 .details-image {
   margin: 40px;
   height: 600px;
@@ -353,5 +363,33 @@ img:hover {
   }
   .searcher .input-wrapper input {
     padding-top: 16px;
+  }
+  .details-main {
+    margin: 0px;
+    margin-top: 20px;
+  }
+  .details-headings {
+    width: 100vw;
+    height: 100vh;
+  }
+  .details-image {
+    margin-top: 30px;
+    margin-bottom: 5px;
+    height: 200px;
+    width: 150px;
+  }
+  .details-overview {
+    height: 500px;
+    width: 300px;
+  }
+  .details-fill {
+    padding: 0;
+  }
+  .details-description {
+    margin: 0;
+  }
+  .details-text {
+    margin: 10px;
+    justify-content: space-between;
   }
 }

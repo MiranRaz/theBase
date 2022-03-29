@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const IMGS = "https://image.tmdb.org/t/p/w500";
 
@@ -12,14 +13,18 @@ const setColor = (vote) => {
   }
 };
 
-export default function TvSeries({ name, poster_path, vote_average }) {
+export default function TvSeries({ props }) {
   return (
     <div className="card">
-      <img src={IMGS + poster_path} alt={name} />
-      <div className="card-info">
-        <h3>{name}</h3>
-        <span className={`tag ${setColor(vote_average)}`}>{vote_average}</span>
-      </div>
+      <Link to="/details" className="card-lnk-to" {...props}>
+        <img src={IMGS + props.poster_path} alt={props.name} />
+        <div className="card-info">
+          <h3>{props.name}</h3>
+          <span className={`tag ${setColor(props.vote_average)}`}>
+            {props.vote_average}
+          </span>
+        </div>
+      </Link>
     </div>
   );
 }
