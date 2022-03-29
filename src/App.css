@@ -1,5 +1,10 @@
+/* shades */
 :root {
   --primary: #032541;
+  --second: "#324B69";
+  --midle: "#5D7495";
+  --warm: "#89A1C4";
+  --light: "#B8D0F4";
   --white: #fff;
 }
 
@@ -25,7 +30,7 @@ body {
 .frame {
   background-image: url("./img/MAIN.jpg");
   display: flex;
-  animation: displace 16s linear infinite;
+  animation: displace 35s linear infinite;
 }
 
 @keyframes displace {
@@ -131,7 +136,6 @@ header .nav-links {
 }
 
 header .nav-links li {
-  
   font-weight: 700;
   font-size: 1.6rem;
   display: inline-block;
