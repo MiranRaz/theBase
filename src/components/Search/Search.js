@@ -1,13 +1,19 @@
 import React from "react";
 
-export default function Search() {
+export default function Search(query) {
+  const getSearchTerm = (e) => {
+    query.onChange(e.target.value);
+  };
   return (
-    <div className="add-page">
-      <div className="container">
-        <div className="add-content">
-          <div className="input-wrapper">
-            <input type="text" placeholder="Search here..." />
-          </div>
+    <div className="container">
+      <div className="searcher">
+        <div className="input-wrapper">
+          <input
+            type="text"
+            placeholder="Enter at least 3 characters..."
+            value={query.query}
+            onChange={getSearchTerm}
+          />
         </div>
       </div>
     </div>

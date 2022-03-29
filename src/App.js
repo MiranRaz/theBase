@@ -11,7 +11,7 @@ import Intro from "./components/Intro/Intro";
 import ContentLoader from "./components/ContentLoader/ContentLoader";
 import PageLoader from "./components/PageLoader/PageLoader";
 import CustomPages from "./components/CustomPages/CustomPages";
-//import Search from "./components/Search/Search";
+import Search from "./components/Search/Search";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -55,12 +55,12 @@ export default function App() {
   }, [page]);
 
   const movieChangeHandler = (e) => {
-    e.preventDefault();
-    setQuery(e.target.value);
-    var length = e.target.value.length;
+    setQuery(e);
+    console.log(e);
+    var length = e.length;
     if (length >= 3) {
       fetch(
-        `https://api.themoviedb.org/3/search/movie?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}&page=${page}`
+        `https://api.themoviedb.org/3/search/movie?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e}&page=${page}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -74,12 +74,12 @@ export default function App() {
   };
 
   const seriesChangeHandler = (e) => {
-    e.preventDefault();
-    setQuery(e.target.value);
-    var length = e.target.value.length;
+    setQuery(e);
+    console.log(e);
+    var length = e.length;
     if (length >= 3) {
       fetch(
-        `https://api.themoviedb.org/3/search/tv?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e.target.value}&page=${page}`
+        `https://api.themoviedb.org/3/search/tv?api_key=8c2bc4e84cc4e0bebe9e71ffd52ae730&language=en-US&page=1&include_adult=false&query=${e}&page=${page}`
       )
         .then((res) => res.json())
         .then((data) => {
@@ -117,18 +117,7 @@ export default function App() {
                   <h3 className="under-heading" id="search">
                     Find your favourite Movie!
                   </h3>
-                  <div className="container">
-                    <div className="searcher">
-                      <div className="input-wrapper">
-                        <input
-                          type="text"
-                          placeholder="Enter at least 3 letters..."
-                          value={query}
-                          onChange={movieChangeHandler}
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <Search value={query} onChange={movieChangeHandler} />
                   {loading ? (
                     <ContentLoader />
                   ) : (
@@ -154,18 +143,7 @@ export default function App() {
                   <h3 className="under-heading" id="search">
                     Find your favourite Tv Show!
                   </h3>
-                  <div className="container">
-                    <div className="searcher">
-                      <div className="input-wrapper">
-                        <input
-                          type="text"
-                          placeholder="Enter at least 3 letters..."
-                          value={query}
-                          onChange={seriesChangeHandler}
-                        />
-                      </div>
-                    </div>
-                  </div>
+                  <Search value={query} onChange={seriesChangeHandler} />
                   {loading ? (
                     <ContentLoader />
                   ) : (
