@@ -1,6 +1,5 @@
 :root {
   --primary: #032541;
-  --secondary: #21d07a;
   --white: #fff;
 }
 
@@ -259,6 +258,73 @@ img:hover {
   justify-content: center;
   width: 100%;
   margin: 100px 0px;
+}
+
+/* Details page */
+.details-main {
+  margin: 150px 100px 0px 100px;
+  color: black;
+}
+
+.details-headings {
+  background-image: url("./img/CINEMA.png");
+  background-size: cover;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  height: 80vh;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+}
+.details-image {
+  margin: 40px;
+  height: 600px;
+  width: 450px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+}
+
+.details-image img {
+  height: 100%;
+  width: 100%;
+  transform: none;
+  opacity: 1;
+}
+
+.details-overview {
+  background-color: rgb(196, 207, 232);
+  height: 600px;
+  width: 900px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+}
+
+.details-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details-fill {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  padding: 1rem;
+}
+.details-description {
+  background-color: rgb(222, 229, 245);
+  display: flex;
+  align-items: center;
+  height: 300px;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  margin: 30px;
+}
+.details-text {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  margin-left: 30px;
 }
 
 /* RESPONSIVE MEDIA*/

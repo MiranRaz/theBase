@@ -12,14 +12,18 @@ const setColor = (vote) => {
   }
 };
 
-export default function Movies({ title, poster_path, vote_average }) {
+export default function Movies({ id, title, poster_path, vote_average }) {
   return (
-    <div className="card">
-      <img src={IMGS + poster_path} alt={title} />
-      <div className="card-info">
-        <h3>{title}</h3>
-        <span className={`tag ${setColor(vote_average)}`}>{vote_average}</span>
+    <>
+      <div className="card">
+        <img src={IMGS + poster_path} alt={title} />
+        <div className="card-info">
+          <h3>{title}</h3>
+          <span className={`tag ${setColor(vote_average)}`}>
+            {vote_average}
+          </span>
+        </div>
       </div>
-    </div>
+    </>
   );
 }

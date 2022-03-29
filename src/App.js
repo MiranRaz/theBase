@@ -12,6 +12,7 @@ import ContentLoader from "./components/ContentLoader/ContentLoader";
 import PageLoader from "./components/PageLoader/PageLoader";
 import CustomPages from "./components/CustomPages/CustomPages";
 import Search from "./components/Search/Search";
+import MovieDetails from "./components/MovieDetails/MovieDetails";
 
 export default function App() {
   const [movies, setMovies] = useState([]);
@@ -106,7 +107,6 @@ export default function App() {
       ) : (
         <Router>
           <NavBar />
-          <Intro />
 
           <Routes>
             <Route
@@ -114,6 +114,7 @@ export default function App() {
               path="/"
               element={
                 <>
+                  <Intro />
                   <h3 className="under-heading" id="search">
                     Find your favourite Movie!
                   </h3>
@@ -136,10 +137,13 @@ export default function App() {
               }
             />
 
+            <Route path="/details" element={<MovieDetails />} />
+
             <Route
               path="/tvseries"
               element={
                 <>
+                  <Intro />
                   <h3 className="under-heading" id="search">
                     Find your favourite Tv Show!
                   </h3>
