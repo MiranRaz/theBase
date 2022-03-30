@@ -1,10 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 
 import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
 import { Avatar } from "@mui/material";
 
+const IMGS = "https://image.tmdb.org/t/p/w500";
+
+const setColor = (vote) => {
+  if (vote >= 8) {
+    return "green";
+  } else if (vote >= 6) {
+    return "orange";
+  } else {
+    return "red";
+  }
+};
+
 export default function MovieDetails(props) {
+  const location = useLocation();
+  const data = location.state;
+
   return (
     <div className="details-main">
       <div className="details-back">
@@ -16,32 +31,21 @@ export default function MovieDetails(props) {
       </div>
       <div className="details-headings">
         <div className="details-image">
-          <img src={props.poster_path} alt={props.title} />
+          <img src={IMGS + data.poster_path} alt={data.title} />
         </div>
         <div className="details-overview">
           <div className="details-title">
-            {/* <h1>{props.title}</h1> */}
-            <h1>TITLE</h1>
+            <h1>{data.title}</h1>
           </div>
           <div className="details-fill">
-            {/* <h1 className="tag + green">{props.vote_average}</h1>
-            <h1 style={{ color: "red" }}>{props.original_language}</h1>
-            <h1>{props.release_date}</h1> */}
-            <h1 className="tag + green">9.1</h1>
-            <h1 style={{ color: "red" }}>Eng</h1>
-            <h1>2020</h1>
+            <h1 className={`tag ${setColor(data.vote_average)}`}>
+              {data.vote_average}
+            </h1>
+            <h1 style={{ color: "red" }}>{data.original_language}</h1>
+            <h1>{data.release_date}</h1>
           </div>
           <div className="details-description">
-            {/* <p className="details-text">{props.overview}</p> */}
-            <p className="details-text">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco laboris
-              nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
-              reprehenderit in voluptate velit esse cillum dolore eu fugiat
-              nulla pariatur. Excepteur sint occaecat cupidatat non proident,
-              sunt in culpa qui officia deserunt mollit anim id est laborum.
-            </p>
+            <p className="details-text">{data.overview}</p>
           </div>
         </div>
       </div>

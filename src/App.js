@@ -138,7 +138,7 @@ export default function App() {
             />
 
             {/* DETAILS */}
-            <Route path="/details" element={<MovieDetails />} />
+            <Route path="/details/:id" element={<MovieDetails />} />
 
             {/*TV SHOWS */}
             <Route

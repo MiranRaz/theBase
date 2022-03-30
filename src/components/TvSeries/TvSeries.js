@@ -16,7 +16,7 @@ const setColor = (vote) => {
 export default function TvSeries({ props }) {
   return (
     <div className="card">
-      <Link to="/details" className="card-lnk-to" {...props}>
+      <Link to={`/details/${props.id}`} state={props} className="card-lnk-to">
         <img src={IMGS + props.poster_path} alt={props.name} />
         <div className="card-info">
           <h3>{props.name}</h3>
