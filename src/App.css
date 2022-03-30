@@ -395,26 +395,33 @@ img:hover {
   }
   .details-headings {
     width: 100vw;
-    height: 100vh;
   }
   .details-image {
     margin-top: 30px;
     margin-bottom: 5px;
-    height: 200px;
-    width: 150px;
+    height: 80%;
+    width: 100%;
+  }
+  .details-title {
+    font-size: 17px;
+    margin-left: 30px;
   }
   .details-overview {
-    height: 500px;
-    width: 300px;
+    margin-top: 70px;
+    width: 100%;
   }
   .details-fill {
     padding: 0;
+    margin: 0px 10px 0px 10px ;
+    font-size: 11px;
   }
   .details-description {
     margin: 0;
+    height: 100%;
+    justify-content: start;
   }
   .details-text {
-    margin: 10px;
-    justify-content: space-between;
+    margin: 13px;
+    font-size: 21px;
   }
 }

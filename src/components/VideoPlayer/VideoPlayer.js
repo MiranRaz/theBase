@@ -11,7 +11,7 @@ export default function VideoPlayer() {
         channel="youtube"
         autoplay
         isOpen={isOpen}
-        videoId="jNQXAC9IVRw"
+        videoId="C0DPdy98e4c"
         onClose={() => setOpen(false)}
       />
       <button className="details-trailer-text" onClick={() => setOpen(true)}>
