@@ -32,7 +32,11 @@ export default function MovieDetails(props) {
       <div className="details-headings">
         <div className="details-image">
           <img src={IMGS + data.poster_path} alt={data.title} />
+          <div className="details-trailer">
+            <button className="details-trailer-text">play trailer</button>
+          </div>
         </div>
+
         <div className="details-overview">
           <div className="details-title">
             <h1>{data.title}</h1>
@@ -41,7 +45,7 @@ export default function MovieDetails(props) {
             <h1 className={`tag ${setColor(data.vote_average)}`}>
               {data.vote_average}
             </h1>
-            <h1 style={{ color: "red" }}>{data.original_language}</h1>
+            <h1 style={{ color:"#5D0000" }}>{data.original_language}</h1>
             <h1>{data.release_date}</h1>
           </div>
           <div className="details-description">

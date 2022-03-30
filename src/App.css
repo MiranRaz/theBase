@@ -30,11 +30,11 @@ body {
 .frame {
   background-image: url("./img/MAIN.jpg");
   display: flex;
-  animation: displace 35s linear infinite;
+  animation: slider 33s linear infinite;
   color: var(--second);
 }
 
-@keyframes displace {
+@keyframes slider {
   from {
     background-position: 0 left;
   }
@@ -119,7 +119,7 @@ header .brand a {
   font-weight: 700;
   font-size: 2rem;
   padding: 3px;
-  color: var(--second);
+  color: var(--lightSecond);
 }
 
 header .nav-links {
@@ -285,20 +285,42 @@ img:hover {
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
 }
-
 .details-image {
   margin: 40px;
   height: 800px;
   width: 650px;
-  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
-  border-radius: 7px;
 }
-
 .details-image img {
   height: 100%;
   width: 100%;
-  transform: none;
   opacity: 1;
+  transform: none;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+}
+.details-trailer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.details-trailer-text {
+  background-color: var(--second);
+  color: var(--white);
+  width: 200px;
+  height: 80px;
+  font-family: "Orbitron", sans-serif;
+  box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
+  border-radius: 7px;
+  font-size: 27px;
+  font-weight: 700;
+  margin: 1rem;
+  cursor: pointer;
+  margin-top: -50px;
+}
+.details-trailer-text:hover {
+  background-color: #e6e9ed;
+  color: var(--second);
+  transition: 0.3s;
 }
 
 .details-overview {
@@ -308,11 +330,11 @@ img:hover {
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
 }
-
 .details-title {
   display: flex;
   align-items: center;
   justify-content: center;
+  color: var(--second);
 }
 .details-fill {
   display: flex;
@@ -332,8 +354,9 @@ img:hover {
 .details-text {
   display: flex;
   align-items: center;
-  justify-content: space-evenly;
-  margin-left: 30px;
+  justify-content: center;
+  margin: 30px;
+  font-size: 23px;
 }
 
 /* RESPONSIVE MEDIA*/
@@ -341,7 +364,7 @@ img:hover {
 /*MAX WIDTH*/
 
 @media (max-width: 768px) {
-  .intro{
+  .intro {
     width: 100vw;
     height: 100vh;
   }
