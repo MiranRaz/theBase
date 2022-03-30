@@ -5,7 +5,7 @@ export default function PageLoader() {
   return (
     <div className="loader-cont">
       <div className="main-loader">
-        <MovieIcon style={{ fontSize: "200px" }} />
+        <MovieIcon style={{ color: "#ac2826", fontSize: "200px" }} />
       </div>
     </div>
   );
