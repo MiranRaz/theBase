@@ -39,19 +39,19 @@ export default function NavBar() {
         <Container max-width="md">
           <div className="inner-content">
             <div className="brand">
-              <Link to="/" onClick={handleDrawerClose}>
+              <Link to="/theBase/" onClick={handleDrawerClose}>
                 theBase
               </Link>
             </div>
             <Hidden lgDown>
               <ul className="nav-links">
                 <li>
-                  <Link to="/" onClick={handleDrawerClose}>
+                  <Link to="/theBase/" onClick={handleDrawerClose}>
                     Movies
                   </Link>
                 </li>
                 <li>
-                  <Link to="/tvseries" onClick={handleDrawerClose}>
+                  <Link to="/theBase/tvseries" onClick={handleDrawerClose}>
                     Tv Series
                   </Link>
                 </li>

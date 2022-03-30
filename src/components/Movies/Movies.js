@@ -15,7 +15,7 @@ const setColor = (vote) => {
 export default function Movies({ props }) {
   return (
     <div className="card">
-      <Link to={`/details/${props.id}`} state={props} className="card-lnk-to">
+      <Link to={`/theBase/details/${props.id}`} state={props} className="card-lnk-to">
         <img src={IMGS + props.poster_path} alt={props.title} />
         <div className="card-info">
           <h3>{props.title}</h3>

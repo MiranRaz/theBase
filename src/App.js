@@ -111,7 +111,7 @@ export default function App() {
             {/* MOVIES */}
             <Route
               exact
-              path="/"
+              path="/theBase/"
               element={
                 <>
                   <Intro />
@@ -138,11 +138,11 @@ export default function App() {
             />
 
             {/* DETAILS */}
-            <Route path="/details/:id" element={<MovieDetails />} />
+            <Route path="/theBase/details/:id" element={<MovieDetails />} />
 
             {/*TV SHOWS */}
             <Route
-              path="/tvseries"
+              path="/theBase/tvseries"
               element={
                 <>
                   <Intro />
