@@ -1,16 +1,16 @@
 /* shades */
 :root {
-  --primary: #032541;
-  --second: #324b69;
-  --midle: #5d7495;
-  --warm: #89a1c4;
-  --light: #b8d0f4;
+  --primary: #2e2f32;
+  --second: #ac2826;
+  --lightSecond: #af3c3a;
+  --dirty: #cdd3dc;
   --white: #fff;
 }
 
 body {
   padding: 0;
   margin: 0;
+  background-color: var(--dirty);
 }
 
 /* H1 & H3 */
@@ -31,7 +31,7 @@ body {
   background-image: url("./img/MAIN.jpg");
   display: flex;
   animation: displace 35s linear infinite;
-  color: var(--midle);
+  color: var(--second);
 }
 
 @keyframes displace {
@@ -46,9 +46,9 @@ body {
 .intro {
   align-items: center;
   justify-content: center;
-  background-color: var(--second);
-  box-shadow: inset 0px -37px 17px -17px white;
-  opacity: 0.96;
+  background-color: var(--primary);
+  box-shadow: inset 0px -37px 17px -13px var(--dirty);
+  opacity: 0.97;
   margin-top: 80px;
   height: 70vh;
   width: 100vw;
@@ -77,6 +77,7 @@ body {
   align-items: center;
   justify-content: center;
   font-size: 50px;
+  color: var(--primary);
 }
 
 .container {
@@ -118,6 +119,7 @@ header .brand a {
   font-weight: 700;
   font-size: 2rem;
   padding: 3px;
+  color: var(--second);
 }
 
 header .nav-links {
@@ -174,7 +176,7 @@ header .nav-links li:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: var(--light);
+  background-color: var(--primary);
   width: 100vw;
   height: 100vh;
   animation: fadeInAnimation ease 3s;
@@ -194,7 +196,7 @@ header .nav-links li:last-child {
 /* Movie & TV-Series Page */
 .card-lnk-to {
   text-decoration: none;
-  color: black;
+  color: var(--primary);
 }
 .card-container {
   display: flex;
@@ -203,6 +205,7 @@ header .nav-links li:last-child {
   justify-content: center;
   width: 100vw;
 }
+
 .card {
   margin: 5rem;
   width: 500px;
@@ -210,7 +213,7 @@ header .nav-links li:last-child {
   border-radius: 7px;
   margin-top: 10rem;
   cursor: pointer;
-  background-color: rgb(254, 248, 240);
+  background-color: var(--white);
 }
 
 .card img {
@@ -272,7 +275,7 @@ img:hover {
   width: 20px;
 }
 .details-headings {
-  background-color: var(--second);
+  background-color: var(--lightSecond);
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
@@ -299,7 +302,7 @@ img:hover {
 }
 
 .details-overview {
-  background-color: var(--midle);
+  background-color: var(--dirty);
   height: 600px;
   width: 900px;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
@@ -318,7 +321,7 @@ img:hover {
   padding: 1rem;
 }
 .details-description {
-  background-color: var(--light);
+  background-color: var(--white);
   display: flex;
   align-items: center;
   height: 300px;

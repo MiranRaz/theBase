@@ -32,7 +32,7 @@ export default function NavBar() {
   return (
     <AppBar
       sx={{
-        backgroundColor: "#032541",
+        backgroundColor: "#2e2f32",
       }}
     >
       <Toolbar disableGutters>
@@ -78,6 +78,7 @@ export default function NavBar() {
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
+            backgroundColor: "#af3c3a",
           },
         }}
         variant="persistent"
@@ -98,7 +99,7 @@ export default function NavBar() {
           <div className="under-heading">
             <Link
               to="/"
-              style={{ color: "black", margin: "20px", fontSize: "30px" }}
+              style={{ margin: "20px", fontSize: "30px" }}
               onClick={handleDrawerClose}
             >
               Movies
@@ -108,7 +109,7 @@ export default function NavBar() {
           <div className="under-heading">
             <Link
               to="/tvseries"
-              style={{ color: "black", margin: "20px", fontSize: "30px" }}
+              style={{ margin: "20px", fontSize: "30px" }}
               onClick={handleDrawerClose}
             >
               Tv Series
