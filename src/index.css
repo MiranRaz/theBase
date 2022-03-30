@@ -1,10 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap");
 * {
   scroll-behavior: smooth;
-
   outline: none !important;
   outline-color: transparent !important;
   border: none !important;
+  border-color: none !important ;
 }
 body {
   font-family: "Orbitron", sans-serif;

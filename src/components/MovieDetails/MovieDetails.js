@@ -9,7 +9,7 @@ export default function MovieDetails(props) {
     <div className="details-main">
       <div className="details-back">
         <Link to="/">
-          <Avatar style={{ backgroundColor: "red" }}>
+          <Avatar style={{ backgroundColor: "#032541" }}>
             <ChevronLeftIcon />
           </Avatar>
         </Link>

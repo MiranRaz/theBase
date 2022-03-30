@@ -1,10 +1,10 @@
 /* shades */
 :root {
   --primary: #032541;
-  --second: "#324B69";
-  --midle: "#5D7495";
-  --warm: "#89A1C4";
-  --light: "#B8D0F4";
+  --second: #324b69;
+  --midle: #5d7495;
+  --warm: #89a1c4;
+  --light: #b8d0f4;
   --white: #fff;
 }
 
@@ -31,6 +31,7 @@ body {
   background-image: url("./img/MAIN.jpg");
   display: flex;
   animation: displace 35s linear infinite;
+  color: var(--midle);
 }
 
 @keyframes displace {
@@ -45,8 +46,9 @@ body {
 .intro {
   align-items: center;
   justify-content: center;
-  background-color: rgb(198, 183, 146);
-  opacity: 0.8;
+  background-color: var(--second);
+  box-shadow: inset 0px -37px 17px -17px white;
+  opacity: 0.96;
   margin-top: 80px;
   height: 70vh;
   width: 100vw;
@@ -65,7 +67,7 @@ body {
   position: relative;
   transition-duration: 1s;
   text-decoration: none;
-  color: black;
+  color: inherit;
   font-size: 5rem;
   top: calc(70vh - 777px);
 }
@@ -87,7 +89,6 @@ body {
 
 /* Header Styles */
 header {
-  position: fixed;
   top: 0;
   width: 100vw;
   height: 80px;
@@ -117,7 +118,6 @@ header .brand a {
   font-weight: 700;
   font-size: 2rem;
   padding: 3px;
-  color: whitesmoke;
 }
 
 header .nav-links {
@@ -174,7 +174,7 @@ header .nav-links li:last-child {
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: rgb(198, 183, 146);
+  background-color: var(--light);
   width: 100vw;
   height: 100vh;
   animation: fadeInAnimation ease 3s;
@@ -203,7 +203,6 @@ header .nav-links li:last-child {
   justify-content: center;
   width: 100vw;
 }
-
 .card {
   margin: 5rem;
   width: 500px;
@@ -266,14 +265,14 @@ img:hover {
 /* Details page */
 .details-main {
   margin: 150px 100px 0px 100px;
-  color: black;
+  color: var(--primary);
 }
 .details-back {
   margin: 1rem;
   width: 20px;
 }
 .details-headings {
-  background-image: url("./img/CINEMA.png");
+  background-color: var(--second);
   background-size: cover;
   display: flex;
   flex-wrap: wrap;
@@ -300,7 +299,7 @@ img:hover {
 }
 
 .details-overview {
-  background-color: rgb(196, 207, 232);
+  background-color: var(--midle);
   height: 600px;
   width: 900px;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
@@ -319,7 +318,7 @@ img:hover {
   padding: 1rem;
 }
 .details-description {
-  background-color: rgb(222, 229, 245);
+  background-color: var(--light);
   display: flex;
   align-items: center;
   height: 300px;

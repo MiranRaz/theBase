@@ -30,7 +30,11 @@ export default function NavBar() {
     setOpen(false);
   };
   return (
-    <AppBar style={{ backgroundColor: "#032541" }}>
+    <AppBar
+      sx={{
+        backgroundColor: "#032541",
+      }}
+    >
       <Toolbar disableGutters>
         <Container max-width="md">
           <div className="inner-content">
