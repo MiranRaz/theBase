@@ -4,7 +4,8 @@ import React from "react";
 export default function CustomPages({ setPage, pageNum }) {
   const changeHandler = (page) => {
     setPage(page);
-    window.scroll(0, document.getElementById("#search"));
+    //window.scroll(0, document.getElementById("#search"));
+    window.scroll(0, 970);
   };
 
   return (
