@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 import { styled } from "@mui/material/styles";
 
@@ -39,21 +39,21 @@ export default function NavBar() {
         <Container max-width="md">
           <div className="inner-content">
             <div className="brand">
-              <Link to="/theBase/" onClick={handleDrawerClose}>
+              <NavLink to="/theBase/" onClick={handleDrawerClose}>
                 theBase
-              </Link>
+              </NavLink>
             </div>
             <Hidden lgDown>
               <ul className="nav-links">
                 <li>
-                  <Link to="/theBase/" onClick={handleDrawerClose}>
+                  <NavLink to="/theBase/" onClick={handleDrawerClose}>
                     Movies
-                  </Link>
+                  </NavLink>
                 </li>
                 <li>
-                  <Link to="/theBase/tvseries" onClick={handleDrawerClose}>
+                  <NavLink to="/theBase/tvseries" onClick={handleDrawerClose}>
                     Tv Series
-                  </Link>
+                  </NavLink>
                 </li>
               </ul>
             </Hidden>
@@ -97,23 +97,23 @@ export default function NavBar() {
         <Divider />
         <>
           <div className="under-heading">
-            <Link
-              to="/"
+            <NavLink
+              to="/theBase"
               style={{ margin: "20px", fontSize: "30px" }}
               onClick={handleDrawerClose}
             >
               Movies
-            </Link>
+            </NavLink>
           </div>
           <Divider />
           <div className="under-heading">
-            <Link
-              to="/tvseries"
+            <NavLink
+              to="/theBase/tvseries"
               style={{ margin: "20px", fontSize: "30px" }}
               onClick={handleDrawerClose}
             >
               Tv Series
-            </Link>
+            </NavLink>
           </div>
         </>
       </Drawer>

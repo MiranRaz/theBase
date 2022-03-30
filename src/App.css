@@ -6,7 +6,6 @@
   --dirty: #cdd3dc;
   --white: #fff;
 }
-
 body {
   padding: 0;
   margin: 0;
@@ -19,7 +18,6 @@ body {
   align-items: center;
   justify-content: center;
 }
-
 .heading {
   position: relative;
   font-size: 150px;
@@ -42,7 +40,6 @@ body {
     background-position: 160px center;
   }
 }
-
 .intro {
   align-items: center;
   justify-content: center;
@@ -53,7 +50,6 @@ body {
   height: 70vh;
   width: 100vw;
 }
-
 .cont {
   display: flex;
   align-items: center;
@@ -62,7 +58,6 @@ body {
 .cont:focus {
   outline: none;
 }
-
 .arrow {
   position: relative;
   transition-duration: 1s;
@@ -71,7 +66,6 @@ body {
   font-size: 5rem;
   top: calc(70vh - 777px);
 }
-
 .under-heading {
   display: flex;
   align-items: center;
@@ -79,7 +73,6 @@ body {
   font-size: 50px;
   color: var(--primary);
 }
-
 .container {
   padding-right: 15px;
   padding-left: 15px;
@@ -95,33 +88,28 @@ header {
   height: 80px;
   z-index: 5000;
 }
-
 header .inner-content {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 18px 0;
 }
-
 header a {
-  color: var(--white);
+  color: var(--dirty);
   text-decoration: none;
   transition: all 0.3s ease;
   align-items: center;
   justify-content: center;
 }
-
 header a:hover {
   opacity: 0.7;
 }
-
 header .brand a {
   font-weight: 700;
   font-size: 2rem;
   padding: 3px;
   color: var(--lightSecond);
 }
-
 header .nav-links {
   padding: 0;
   margin: 0;
@@ -129,14 +117,12 @@ header .nav-links {
   display: flex;
   align-items: center;
 }
-
 header .nav-links li {
   font-weight: 700;
   font-size: 1.6rem;
   display: inline-block;
   margin-right: 30px;
 }
-
 header .nav-links li:last-child {
   margin-right: 0;
 }
@@ -147,7 +133,6 @@ header .nav-links li:last-child {
   max-width: 600px;
   margin: 0 auto;
 }
-
 .searcher .input-wrapper input {
   width: 100%;
   background-color: var(--primary);
@@ -205,7 +190,6 @@ header .nav-links li:last-child {
   justify-content: center;
   width: 100vw;
 }
-
 .card {
   margin: 5rem;
   width: 500px;
@@ -215,43 +199,36 @@ header .nav-links li:last-child {
   cursor: pointer;
   background-color: var(--white);
 }
-
 .card img {
   width: 100%;
 }
-
 img:hover {
   opacity: 0.8;
   transition: all 0.4s ease;
   transform: scale(1.008);
 }
-
 .card-info {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
 }
-
 .card-info h3 {
   margin: 0;
 }
-
+/* movie review colors */
 .tag {
   background-color: black;
   border-radius: 5px;
   padding: 0.5rem;
   color: white;
 }
-
 .tag.green {
   background-color: green;
 }
-
 .tag.orange {
   background-color: orange;
 }
-
 .tag.red {
   background-color: red;
 }
@@ -322,7 +299,6 @@ img:hover {
   color: var(--second);
   transition: 0.3s;
 }
-
 .details-overview {
   background-color: var(--dirty);
   height: 600px;
@@ -358,6 +334,7 @@ img:hover {
   margin: 30px;
   font-size: 23px;
 }
+
 /* RESPONSIVE MEDIA*/
 
 /*MAX WIDTH*/
@@ -412,7 +389,7 @@ img:hover {
   }
   .details-fill {
     padding: 0;
-    margin: 0px 10px 0px 10px ;
+    margin: 0px 10px 0px 10px;
     font-size: 11px;
   }
   .details-description {

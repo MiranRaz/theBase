@@ -19,7 +19,6 @@ export default function App() {
   const [series, setSeries] = useState([]);
   const [query, setQuery] = useState("");
   const [loading, setLoading] = useState(true);
-  const [loader, setLoader] = useState(false);
   const [page, setPage] = useState(1);
   const [pageNum, setPageNum] = useState();
 
@@ -91,17 +90,9 @@ export default function App() {
       );
     }
   };
-
-  useEffect(() => {
-    setLoader(true);
-    setTimeout(() => {
-      setLoader(false);
-    }, 1000);
-  }, []);
-
   return (
     <>
-      {loader ? (
+      {loading ? (
         <PageLoader />
       ) : (
         <Router>
