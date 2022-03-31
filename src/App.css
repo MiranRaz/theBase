@@ -12,6 +12,7 @@ body {
   background-color: var(--dirty);
 }
 
+
 /* H1 & H3 */
 .heading-cont {
   display: flex;
@@ -20,7 +21,7 @@ body {
 }
 .heading {
   position: relative;
-  font-size: 150px;
+  font-size: 150px; 
   margin-top: 300px;
 }
 
@@ -53,16 +54,15 @@ body {
 .cont {
   display: flex;
   align-items: center;
-  justify-content: center;
+  justify-content: center;  
 }
 .arrow {
-  position: relative;
-  transition-duration: 1s;
+  position: relative;  
   text-decoration: none;
   color: inherit;
   font-size: 5rem;
-  top: calc(70vh - 777px);
 }
+
 .under-heading {
   display: flex;
   align-items: center;
@@ -71,7 +71,7 @@ body {
   color: var(--primary);
 }
 .container {
-  padding-right: 15px;
+  padding-right: 39px;
   padding-left: 15px;
   margin-right: auto;
   margin-left: auto;
@@ -84,6 +84,7 @@ header {
   width: 100vw;
   height: 80px;
   z-index: 5000;
+  position: relative;
 }
 header .inner-content {
   display: flex;
@@ -133,8 +134,7 @@ header .nav-links li:last-child {
 .searcher .input-wrapper input {
   width: 100%;
   background-color: var(--primary);
-  padding-top: 11px;
-  padding-bottom: 11px;
+  padding: 11px;
   border-radius: 5px;
   border: none;
   color: var(--white);
@@ -257,12 +257,11 @@ img:hover {
 }
 .details-image {
   margin: 40px;
-  height: 800px;
-  width: 650px;
+  object-fit:cover;
 }
 .details-image img {
   height: 100%;
-  width: 100%;
+  width: 100%;  
   opacity: 1;
   transform: none;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
@@ -332,6 +331,15 @@ img:hover {
 
 /*MAX WIDTH*/
 
+@media (max-width: 1075px) {
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .intro-wrapper {
+    margin-top: 0;
+  }
+}
+
 @media (max-width: 768px) {
   .intro {
     width: 100vw;
@@ -339,25 +347,17 @@ img:hover {
   }
   .heading {
     font-size: 63px;
-    margin-top: 200px;
     z-index: 6000;
   }
   .under-heading {
     font-size: 18px;
     margin-top: 70px;
   }
-  .arrow {
-    font-size: 4rem;
-    top: calc(100vh - 40rem);
-  }
   .card-container {
     grid-template-columns: repeat(1, 1fr);
   }
   .card {
     margin: 1rem;
-  }
-  .searcher {
-    padding: 60px 0;
   }
   .searcher .input-wrapper input {
     padding-top: 16px;

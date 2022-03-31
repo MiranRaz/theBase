@@ -113,16 +113,18 @@ export default function App() {
                   {loading ? (
                     <ContentLoader />
                   ) : (
-                    <div className="card-container">
-                      {movies.length > 0 ? (
-                        movies.map((movie) => (
-                          <Movies key={movie.id} props={movie} />
-                        ))
-                      ) : (
-                        <Nothing />
-                      )}
+                    <>
+                      <div className="card-container">
+                        {movies.length > 0 ? (
+                          movies.map((movie) => (
+                            <Movies key={movie.id} props={movie} />
+                          ))
+                        ) : (
+                          <Nothing />
+                        )}
+                      </div>
                       <CustomPages setPage={setPage} pageNum={pageNum} />
-                    </div>
+                    </>
                   )}
                 </>
               }
@@ -144,16 +146,18 @@ export default function App() {
                   {loading ? (
                     <ContentLoader />
                   ) : (
-                    <div className="card-container">
-                      {series.length > 0 ? (
-                        series.map((serie) => (
-                          <TvSeries key={serie.id} props={serie} />
-                        ))
-                      ) : (
-                        <Nothing />
-                      )}
+                    <>
+                      <div className="card-container">
+                        {series.length > 0 ? (
+                          series.map((serie) => (
+                            <TvSeries key={serie.id} props={serie} />
+                          ))
+                        ) : (
+                          <Nothing />
+                        )}
+                      </div>
                       <CustomPages setPage={setPage} pageNum={pageNum} />
-                    </div>
+                    </>
                   )}
                 </>
               }
