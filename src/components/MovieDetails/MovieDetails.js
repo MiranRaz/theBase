@@ -23,13 +23,13 @@ export default function MovieDetails(props) {
 
   return (
     <div className="details-main">
-      <div className="details-back">
-        <Link to="/theBase/">
-          <Avatar style={{ backgroundColor: "#ac2826" }}>
-            <ChevronLeftIcon />
-          </Avatar>
-        </Link>
-      </div>
+         <div className="details-back">
+            <Link to="/theBase/">
+              <Avatar style={{ backgroundColor: "#ac2826" }}>
+                <ChevronLeftIcon />
+              </Avatar>
+            </Link>
+          </div>
       <div className="details-headings">
         <div className="details-image">
           <img src={IMGS + data.poster_path} alt={data.title} />
@@ -37,7 +37,6 @@ export default function MovieDetails(props) {
             <VideoPlayer />
           </div>
         </div>
-
         <div className="details-overview">
           <div className="details-title">
             <h1>{data.title}</h1>

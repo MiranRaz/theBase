@@ -234,12 +234,16 @@ img:hover {
 /* Details page */
 .details-main {
   color: var(--primary);
+  margin: 100px;
 }
 .details-back {
+  padding: 2rem;
   width: 20px;
+  position: absolute;
+  top: 120px;
 }
 .details-headings {
-  margin: 100px;
+  margin-top: 200px;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   background-color: var(--lightSecond);
@@ -325,14 +329,21 @@ img:hover {
 
 /*MAX WIDTH*/
 @media (max-width: 1199px) {
+  .details-main{
+    margin: 0;
+  }
+  .details-back {
+    padding: 1rem;
+    top: 80px;
+  }
   .details-headings {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     margin: 0;
   }
-  .details-image img{
-    margin-top: 1rem;
+  .details-image img {
+    margin-top: 4.5rem;
     width: 100%;
   }
   .details-title {
@@ -352,6 +363,9 @@ img:hover {
   }
   .details-text {
     font-size: 21px;
+  }
+  .details-a{
+    background-color: pink !important;
   }
 }
 @media (max-width: 1075px) {
