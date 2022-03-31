@@ -106,7 +106,11 @@ export default function App() {
               element={
                 <>
                   <Intro />
-                  <h3 className="under-heading" id="search">
+                  <h3
+                    className="under-heading"
+                    style={{ paddingTop: "100px" }}
+                    id="search"
+                  >
                     Find your favourite Movie!
                   </h3>
                   <Search value={query} onChange={movieChangeHandler} />
@@ -139,7 +143,11 @@ export default function App() {
               element={
                 <>
                   <Intro />
-                  <h3 className="under-heading" id="search">
+                  <h3
+                    className="under-heading"
+                    id="search"
+                    style={{ paddingTop: "100px" }}
+                  >
                     Find your favourite Tv Show!
                   </h3>
                   <Search value={query} onChange={seriesChangeHandler} />
