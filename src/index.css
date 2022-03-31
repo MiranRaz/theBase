@@ -1,9 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Orbitron:wght@400;600;800&display=swap");
 * {
   scroll-behavior: smooth;
-  outline: none !important;
+
+  outline: 0 !important;
+  outline-width: 0px !important;
+  outline-style: none !important;
   outline-color: transparent !important;
-  border: none !important;
+
+  border: 0 !important;
+  border-style: none;
   border-color: none !important ;
 }
 body {

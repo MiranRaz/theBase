@@ -5,18 +5,18 @@ export default function Intro() {
   return (
     <div className="frame">
       <div className="intro">
-        <div className="heading-cont">
-          <h1 className="heading">Top 30!</h1>
+        <div className="intro-wrapper">
+            <h1 className="heading">Top 30!</h1>
+          <a href="#search" className="arrow">
+            <div className="cont">
+              <KeyboardArrowDownIcon
+                sx={{
+                  fontSize: 140,
+                }}
+              />
+            </div>
+          </a>
         </div>
-        <a href="#search" className="arrow">
-          <div className="cont">
-            <KeyboardArrowDownIcon
-              sx={{
-                fontSize: 140,
-              }}
-            />
-          </div>
-        </a>
       </div>
     </div>
   );
