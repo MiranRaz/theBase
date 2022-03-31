@@ -4,10 +4,13 @@ import { NavLink } from "react-router-dom";
 import { styled } from "@mui/material/styles";
 
 import { AppBar, Container, Divider, IconButton, Toolbar } from "@mui/material";
+
 import Hidden from "@mui/material/Hidden";
+import Drawer from "@mui/material/Drawer";
+
 import MenuIcon from "@mui/icons-material/Menu";
 import ChevronRightIcon from "@mui/icons-material/ChevronRight";
-import Drawer from "@mui/material/Drawer";
+import AdjustIcon from "@mui/icons-material/Adjust";
 
 const drawerWidth = 270;
 
@@ -40,7 +43,7 @@ export default function NavBar() {
           <div className="inner-content">
             <div className="brand">
               <NavLink to="/theBase/" onClick={handleDrawerClose}>
-                theBase
+                <AdjustIcon style={{ fontSize: 55 }} />
               </NavLink>
             </div>
             <Hidden lgDown>

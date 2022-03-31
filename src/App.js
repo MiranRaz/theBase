@@ -146,7 +146,7 @@ export default function App() {
                   <h3
                     className="under-heading"
                     id="search"
-                    style={{ paddingTop: "100px" }}
+                    style={{ paddingTop: "50px" }}
                   >
                     Find your favourite Tv Show!
                   </h3>

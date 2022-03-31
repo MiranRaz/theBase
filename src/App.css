@@ -11,7 +11,9 @@ body {
   margin: 0;
   background-color: var(--dirty);
 }
-
+h1 {
+  margin: 0;
+}
 /* H1 & H3 */
 .heading {
   position: relative;
@@ -39,27 +41,25 @@ body {
 
 .intro {
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  background-color: var(--primary);
   box-shadow: inset 0px -37px 17px -13px var(--dirty);
-  opacity: 0.97;
   margin-top: 80px;
-  height: 70vh;
+  height: 60vh;
   width: 100vw;
 }
-.intro-wrapper {
-  flex-wrap: wrap;
-  justify-content: space-around;
+.intro-logo {
+  background-color: var(--dirty);
+  border-radius: 10px;
+  box-shadow: 0px 0px 23px 23px var(--dirty);
+  font-size: 3rem;
 }
-.cont {
-  display: flex;
-  justify-content: center;
+.intro-logo:hover {
+  color: var(--lightSecond);
 }
 .arrow {
   text-decoration: none;
   color: inherit;
-  font-size: 5rem;
 }
 .under-heading {
   display: flex;
@@ -101,9 +101,6 @@ header a:hover {
   opacity: 0.7;
 }
 header .brand a {
-  font-weight: 700;
-  font-size: 2rem;
-  padding: 3px;
   color: var(--lightSecond);
 }
 header .nav-links {
@@ -298,6 +295,7 @@ img:hover {
   margin: 5rem;
 }
 .details-title {
+  margin: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -373,7 +371,9 @@ img:hover {
 @media (max-width: 768px) {
   .intro {
     width: 100vw;
-    height: 100vh;
+  }
+  .intro-logo {
+    font-size: 1rem;
   }
   .heading {
     font-size: 63px;
