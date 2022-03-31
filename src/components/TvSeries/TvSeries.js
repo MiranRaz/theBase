@@ -13,10 +13,19 @@ const setColor = (vote) => {
   }
 };
 
+const upScroller = () => {
+  window.scrollTo(0, 0);
+};
+
 export default function TvSeries({ props }) {
   return (
     <div className="card">
-      <Link to={`/theBase/details/${props.id}`} state={props} className="card-lnk-to">
+      <Link
+        to={`/theBase/details/${props.id}`}
+        state={props}
+        onClick={upScroller}
+        className="card-lnk-to"
+      >
         <img src={IMGS + props.poster_path} alt={props.name} />
         <div className="card-info">
           <h3>{props.name}</h3>
