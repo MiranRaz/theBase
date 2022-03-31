@@ -48,21 +48,19 @@ body {
   height: 70vh;
   width: 100vw;
 }
-.intro-wrapper{
+.intro-wrapper {
   flex-wrap: wrap;
   justify-content: space-around;
 }
 .cont {
   display: flex;
   justify-content: center;
-
 }
 .arrow {
   text-decoration: none;
   color: inherit;
   font-size: 5rem;
 }
-
 .under-heading {
   display: flex;
   align-items: center;
@@ -147,7 +145,6 @@ header .nav-links li:last-child {
   align-items: center;
   justify-content: center;
 }
-
 .loader {
   position: relative;
   top: 50px;
@@ -244,23 +241,23 @@ img:hover {
   width: 20px;
 }
 .details-headings {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
   background-color: var(--lightSecond);
-  background-size: cover;
-  display: flex;
-  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-evenly;
   height: 80vh;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
   border-radius: 7px;
 }
 .details-image {
   margin: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   object-fit: cover;
 }
 .details-image img {
-  height: 100%;
-  width: 100%;
   opacity: 1;
   transform: none;
   box-shadow: 7px 7px 7px rgba(0, 0, 0, 0.25);
@@ -347,7 +344,6 @@ img:hover {
   }
   .under-heading {
     font-size: 18px;
-    margin-top: 70px;
   }
   .card-container {
     grid-template-columns: repeat(1, 1fr);
