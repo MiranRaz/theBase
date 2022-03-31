@@ -329,7 +329,7 @@ img:hover {
 
 /*MAX WIDTH*/
 @media (max-width: 1199px) {
-  .details-main{
+  .details-main {
     margin: 0;
   }
   .details-back {
@@ -363,9 +363,6 @@ img:hover {
   }
   .details-text {
     font-size: 21px;
-  }
-  .details-a{
-    background-color: pink !important;
   }
 }
 @media (max-width: 1075px) {
