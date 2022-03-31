@@ -6,7 +6,7 @@ export default function VideoPlayer() {
   const [isOpen, setOpen] = useState(false);
 
   return (
-    <div>
+    <>
       <ModalVideo
         channel="youtube"
         autoplay
@@ -17,6 +17,6 @@ export default function VideoPlayer() {
       <button className="details-trailer-text" onClick={() => setOpen(true)}>
         play trailer
       </button>
-    </div>
+    </>
   );
 }

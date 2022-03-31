@@ -1,8 +1,8 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 
-import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
-import { Avatar } from "@mui/material";
+// import ChevronLeftIcon from "@mui/icons-material/ChevronLeft";
+// import { Avatar } from "@mui/material";
 import VideoPlayer from "../VideoPlayer/VideoPlayer";
 
 const IMGS = "https://image.tmdb.org/t/p/w500";
@@ -23,13 +23,14 @@ export default function MovieDetails(props) {
 
   return (
     <div className="details-main">
-         <div className="details-back">
-            <Link to="/theBase/">
-              <Avatar style={{ backgroundColor: "#ac2826" }}>
-                <ChevronLeftIcon />
-              </Avatar>
-            </Link>
-          </div>
+      <div className="details-back">
+        <Link to="/theBase/">
+          {/* <Avatar style={{ backgroundColor: "#ac2826" }}> */}
+          {/* <ChevronLeftIcon /> */}
+          <button className="details-go-back">go Back</button>
+          {/* </Avatar> */}
+        </Link>
+      </div>
       <div className="details-headings">
         <div className="details-image">
           <img src={IMGS + data.poster_path} alt={data.title} />

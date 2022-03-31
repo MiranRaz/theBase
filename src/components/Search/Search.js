@@ -10,7 +10,7 @@ export default function Search(query) {
         <div className="input-wrapper">
           <input
             type="text"
-            placeholder="Enter at least 3 characters..."
+            placeholder="Search..."
             value={query.query}
             onChange={getSearchTerm}
           />
