@@ -21,7 +21,7 @@ export default function TvSeries({ props }) {
   return (
     <div className="card">
       <Link
-        to={`/details/${props.id}`}
+        to={`/theBase/details/${props.id}`}
         state={props}
         onClick={upScroller}
         className="card-lnk-to"

@@ -49,7 +49,7 @@ export default function NavBar() {
             <div className="brand">
               <div className="header-logo-box">
                 <NavLink
-                  to="/"
+                  to="/theBase/"
                   onClick={() => {
                     handleDrawerClose();
                     toTop();
@@ -63,7 +63,7 @@ export default function NavBar() {
               <ul className="nav-links">
                 <li>
                   <NavLink
-                    to="/"
+                    to="/theBase/"
                     onClick={() => {
                       handleDrawerClose();
                       toTop();
@@ -74,7 +74,7 @@ export default function NavBar() {
                 </li>
                 <li>
                   <NavLink
-                    to="/tvseries"
+                    to="/theBase/tvseries"
                     onClick={() => {
                       handleDrawerClose();
                       toTop();
@@ -127,7 +127,7 @@ export default function NavBar() {
         <>
           <div className="under-heading">
             <NavLink
-              to="/"
+              to="/theBase/"
               style={{ margin: "20px", fontSize: "30px" }}
               onClick={() => {
                 handleDrawerClose();
@@ -140,7 +140,7 @@ export default function NavBar() {
           <Divider />
           <div className="under-heading">
             <NavLink
-              to="/tvseries"
+              to="/theBase/tvseries"
               style={{ margin: "20px", fontSize: "30px" }}
               onClick={() => {
                 handleDrawerClose();
