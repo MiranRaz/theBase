@@ -32,6 +32,11 @@ export default function NavBar() {
   const handleDrawerClose = () => {
     setOpen(false);
   };
+
+  const toTop = () => {
+    window.scroll(0, 0);
+  };
+
   return (
     <AppBar
       sx={{
@@ -42,23 +47,39 @@ export default function NavBar() {
         <Container max-width="md">
           <div className="inner-content">
             <div className="brand">
-              <NavLink
-                to="/"
-                activeClassName="active"
-                onClick={handleDrawerClose}
-              >
-                <AdjustIcon style={{ fontSize: 55 }} />
-              </NavLink>
+              <div className="header-logo-box">
+                <NavLink
+                  to="/"
+                  onClick={() => {
+                    handleDrawerClose();
+                    toTop();
+                  }}
+                >
+                  <AdjustIcon style={{ fontSize: 55 }} />
+                </NavLink>
+              </div>
             </div>
             <Hidden lgDown>
               <ul className="nav-links">
                 <li>
-                  <NavLink to="/" onClick={handleDrawerClose}>
-                    Movies
+                  <NavLink
+                    to="/"
+                    onClick={() => {
+                      handleDrawerClose();
+                      toTop();
+                    }}
+                  >
+                    <h3>Movies</h3>
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/tvseries" onClick={handleDrawerClose}>
+                  <NavLink
+                    to="/tvseries"
+                    onClick={() => {
+                      handleDrawerClose();
+                      toTop();
+                    }}
+                  >
                     Tv Series
                   </NavLink>
                 </li>
@@ -85,7 +106,7 @@ export default function NavBar() {
           "& .MuiDrawer-paper": {
             width: drawerWidth,
             boxSizing: "border-box",
-            backgroundColor: "#af3c3a",
+            backgroundColor: "#2e2f32",
           },
         }}
         variant="persistent"
@@ -97,6 +118,7 @@ export default function NavBar() {
             <ChevronRightIcon
               sx={{
                 fontSize: "50px",
+                color: "#af3c3a",
               }}
             />
           </IconButton>
@@ -107,7 +129,10 @@ export default function NavBar() {
             <NavLink
               to="/"
               style={{ margin: "20px", fontSize: "30px" }}
-              onClick={handleDrawerClose}
+              onClick={() => {
+                handleDrawerClose();
+                toTop();
+              }}
             >
               Movies
             </NavLink>
@@ -117,7 +142,10 @@ export default function NavBar() {
             <NavLink
               to="/tvseries"
               style={{ margin: "20px", fontSize: "30px" }}
-              onClick={handleDrawerClose}
+              onClick={() => {
+                handleDrawerClose();
+                toTop();
+              }}
             >
               Tv Series
             </NavLink>
