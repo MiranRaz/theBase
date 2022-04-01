@@ -42,7 +42,7 @@ export default function NavBar() {
         <Container max-width="md">
           <div className="inner-content">
             <div className="brand">
-              <NavLink to="/theBase/" onClick={handleDrawerClose}>
+              <NavLink to="/theBase/" activeClassName="active" onClick={handleDrawerClose}>
                 <AdjustIcon style={{ fontSize: 55 }} />
               </NavLink>
             </div>
