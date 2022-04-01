@@ -42,19 +42,23 @@ export default function NavBar() {
         <Container max-width="md">
           <div className="inner-content">
             <div className="brand">
-              <NavLink to="/theBase/" activeClassName="active" onClick={handleDrawerClose}>
+              <NavLink
+                to="/"
+                activeClassName="active"
+                onClick={handleDrawerClose}
+              >
                 <AdjustIcon style={{ fontSize: 55 }} />
               </NavLink>
             </div>
             <Hidden lgDown>
               <ul className="nav-links">
                 <li>
-                  <NavLink to="/theBase/" onClick={handleDrawerClose}>
+                  <NavLink to="/" onClick={handleDrawerClose}>
                     Movies
                   </NavLink>
                 </li>
                 <li>
-                  <NavLink to="/theBase/tvseries" onClick={handleDrawerClose}>
+                  <NavLink to="/tvseries" onClick={handleDrawerClose}>
                     Tv Series
                   </NavLink>
                 </li>
@@ -101,7 +105,7 @@ export default function NavBar() {
         <>
           <div className="under-heading">
             <NavLink
-              to="/theBase"
+              to="/"
               style={{ margin: "20px", fontSize: "30px" }}
               onClick={handleDrawerClose}
             >
@@ -111,7 +115,7 @@ export default function NavBar() {
           <Divider />
           <div className="under-heading">
             <NavLink
-              to="/theBase/tvseries"
+              to="/tvseries"
               style={{ margin: "20px", fontSize: "30px" }}
               onClick={handleDrawerClose}
             >

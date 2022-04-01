@@ -19,7 +19,7 @@ export default function Movies({ props }) {
   return (
     <div className="card">
       <Link
-        to={`/theBase/details/${props.id}`}
+        to={`/details/${props.id}`}
         state={props}
         onClick={upScroller}
         className="card-lnk-to"

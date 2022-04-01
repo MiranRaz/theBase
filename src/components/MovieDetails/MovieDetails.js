@@ -24,7 +24,7 @@ export default function MovieDetails(props) {
   return (
     <div className="details-main">
       <div className="details-back">
-        <Link to="/theBase/">
+        <Link to="/">
           {/* <Avatar style={{ backgroundColor: "#ac2826" }}> */}
           {/* <ChevronLeftIcon /> */}
           <button className="details-go-back">go Back</button>
