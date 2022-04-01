@@ -362,7 +362,6 @@ img:hover {
   }
   .details-back {
     padding: 1rem;
-    top: 80px;
   }
   .details-headings {
     display: flex;
@@ -371,7 +370,7 @@ img:hover {
     margin: 0;
   }
   .details-image img {
-    margin-top: 4.5rem;
+    margin-top: 8.5rem;
     width: 100%;
   }
   .details-title {
